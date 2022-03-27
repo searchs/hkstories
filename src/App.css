@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background: #f4f4f4;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -32,7 +36,71 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+h2 {
+  color: #CA1500;
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: darkcyan;
+}
+
+h6 {
+  color: #000EBB;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #000EBA;
+}
+
+a:visited {
+  color: darkcyan;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.Book {
+  align-items: left;
+  text-align: left;
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 7px;
+  max-width: 250px;
+  box-shadow: 1px 2px 1px #f6f6f6;
+  background: 'black';
+  color: 'white';
+
+}
+
+.BookTitle {
+  letter-spacing: 2px;
+  font-size: 1.025em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  background-color: 'black'
+}
+
+a.BookTitle {
+  letter-spacing: 2px;
+  font-size: 1.025em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: 'yellow';
+  background-color: 'black'
 }
