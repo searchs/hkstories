@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import Book from './components/Book';
+import BookList from './components/BookList';
+import SearchBox from './components/SearchBox';
 
 const bookList = [
   {
@@ -38,62 +39,42 @@ const bookList = [
 ];
 
 function App() {
-  const handleSearch = (event) => {
-    console.log(event.target.value);
+  const [books, setBooks] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // const handleSearch = (event) => {
+  //   console.log(event.target.value);
+  // };
+
+  useEffect(
+    (props) => {
+      setBooks(bookList);
+      console.log('Books:', books);
+    },
+    [books]
+  );
+
+  const onHandleChange = (ev) => {
+    setSearchTerm(ev.target.value);
   };
+
+  const filteredBooks = books.filter((books) => {
+    return (
+      books.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      books.author.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  });
+
+  console.log('SearchTerm: _', searchTerm, 'Filtered Books:', filteredBooks);
 
   return (
     <div className='App'>
-      <h2> Hacker Stories</h2>
-      <Search onSearch={handleSearch} />
+      <h2 className='orange'> Hacker Stories</h2>
+      <SearchBox handleChange={onHandleChange} />
       <hr />
-      <ItemList list={bookList} />
+      <BookList books={filteredBooks} />
     </div>
   );
 }
-
-const Search = (props) => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-    console.log(searchTerm);
-
-    props.onSearch(event);
-  };
-
-  return (
-    <div>
-      <label htmlFor='search'>Search:</label>
-      <input type='text' id='search' onChange={handleChange} />
-
-      <p>
-        Searching for <strong>{searchTerm}</strong>
-      </p>
-    </div>
-  );
-};
-
-const ItemList = (props) => {
-  return (
-    <ul>
-      {props.list.map((book) => {
-        return (
-          <li key={book.objectID}>
-            {
-              <Book
-                title={book.title}
-                url={book.url}
-                points={book.points}
-                author={book.author}
-                num_comments={book.num_comments}
-              />
-            }
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
 
 export default App;

@@ -1,21 +1,20 @@
 import React from 'react';
 
-function Book({ title, url, author, comments_count, points }) {
+function Book(props) {
   return (
     <div className='Book bg-dark-blue silver'>
       <span>
-        <a href={url} className='link yellow uppercase'>
-          Book Title: {title}{' '}
+        <a href={props.url} className='link yellow uppercase'>
+          Book Title: {props.title}{' '}
         </a>
       </span>
       <p>
-        <span>Author: {author}</span>
+        <span>Author: {props.author}</span>
         <span>
-          {' '}
           <br />
-          Comments Counts: {comments_count}{' '}
+          Comments Counts: {props.comments_count}
         </span>
-        <span> Points: {points} </span>
+        <span> Points: {props.points} </span>
       </p>
     </div>
   );
