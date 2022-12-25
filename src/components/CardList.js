@@ -1,19 +1,19 @@
 import React from 'react';
-import Book from './Book';
+import Card from './Card';
 
-const BookList = ({ books }) => {
+const CardList = ({ books }) => {
   return books.map((book, idx) => {
     return (
-      <Book
+      <Card
         key={idx}
         title={books[idx].title}
         url={books[idx].url}
         author={books[idx].author}
-        comments_count={books[idx].comments}
+        num_comments={books[idx].num_comments}
         points={books[idx].points}
       />
     );
   });
 };
 
-export default BookList;
+export default CardList;

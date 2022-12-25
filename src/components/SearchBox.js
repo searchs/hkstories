@@ -5,7 +5,7 @@ const SearchBox = ({ handleChange }) => {
     <div className='pa2 ma2 light-blue'>
       <input
         type='search'
-        placeholder='Search books'
+        placeholder='Search books by author or title'
         className='pa3 ba bw1 b--solid b--gray br2'
         onChange={handleChange}
       />
