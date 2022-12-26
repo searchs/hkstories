@@ -64,14 +64,18 @@ const bookList = [
 
 function App() {
   const [books, setBooks] = useState([]);
+  // const [searchTerm, setSearchTerm] = useSemiPersistentState('React');
+  // const handleSearch = (event) => {
+  // setSearchTerm(event.target.value);
+  // };
   const [searchTerm, setSearchTerm] = useState(
     localStorage.getItem('search') || 'React'
   );
 
   useEffect(() => {
     localStorage.setItem('search', searchTerm);
-    // setBooks(bookList);
-    // console.log('Books:', books);
+    setBooks(bookList);
+    console.log('Books:', bookList);
   }, [searchTerm]);
 
   const onHandleChange = (event) => {
@@ -88,7 +92,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h2 className='red'> Hacker Nuice</h2>
+      <h2 className='green'> Hacker Nuice</h2>
       <SearchBox search={searchTerm} handleChange={onHandleChange} />
       <hr />
       <CardList books={filteredBooks} />
