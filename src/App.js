@@ -79,10 +79,7 @@ function App() {
     return [value, setValue];
   };
 
-  const [searchTerm, setSearchTerm] = useSemiPersistenceState(
-    'search',
-    'React'
-  );
+  const [searchTerm, setSearchTerm] = useSemiPersistenceState('search', 'red');
 
   // useState(
   //   localStorage.getItem('search') || 'React'
@@ -109,7 +106,7 @@ function App() {
     <div className='App'>
       <Header />
       <SearchBox search={searchTerm} handleChange={onHandleChange} />
-      <CardList books={filteredBooks} className='center' />
+      <CardList books={filteredBooks} className='center items-center pa-3' />
       <Footer />
     </div>
   );
