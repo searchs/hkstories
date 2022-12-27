@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import CardList from './components/CardList';
+import Footer from './components/Footer';
 import SearchBox from './components/SearchBox';
 
 const bookList = [
@@ -75,7 +76,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem('search', searchTerm);
     setBooks(bookList);
-    console.log('Books:', bookList);
   }, [searchTerm]);
 
   const onHandleChange = (event) => {
@@ -92,10 +92,11 @@ function App() {
 
   return (
     <div className='App'>
-      <h2 className='green'> Hacker Nuice</h2>
+      <h2 className='green fw4'> Hacker Nuice</h2>
       <SearchBox search={searchTerm} handleChange={onHandleChange} />
       <hr />
       <CardList books={filteredBooks} />
+      <Footer />
     </div>
   );
 }

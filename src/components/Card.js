@@ -2,9 +2,9 @@ import React from 'react';
 
 function Card({ url, title, author, num_comments, points }) {
   return (
-    <div className='Book bg-dark-blue white center'>
+    <div className='outline w-25 pa3 mr2 br3 ma2 bg-black white'>
       <h3>
-        <a href={url} className='link yellow uppercase'>
+        <a href={url} className='link yellow fw4'>
           {title}
         </a>
       </h3>

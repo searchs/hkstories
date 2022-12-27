@@ -73,7 +73,7 @@ ul {
   list-style: none;
 }
 
-.Book {
+/* .Book {
   align-items: left;
   text-align: left;
   padding: 5px;
@@ -85,7 +85,7 @@ ul {
   background: 'black';
   color: 'white';
 
-}
+} */
 
 .BookTitle {
   letter-spacing: 2px;
@@ -95,7 +95,7 @@ ul {
   color: white;
   background-color: 'black'
 }
-
+/* 
 a.BookTitle {
   letter-spacing: 2px;
   font-size: 1.025em;
@@ -103,4 +103,14 @@ a.BookTitle {
   text-transform: uppercase;
   color: 'yellow';
   background-color: 'black'
+} */
+
+.bg-dark-blue { 
+  background: #000ebb;
+}
+
+.bg-footer {
+  background: #080708;
+  left:0;
+  bottom:0;
 }
