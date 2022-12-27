@@ -25,7 +25,7 @@ const bookList = [
   {
     title: 'Redux Revoked Java - Functional Prog',
     url: 'https://reduxrevoked.js.org/',
-    author: 'Dan Ajibode, Fisher Smallville',
+    author: 'Tofarati Daniels, Fisher Smallville',
     num_comments: 2,
     points: 4,
     objectID: 2
@@ -33,7 +33,7 @@ const bookList = [
   {
     title: 'Ecommerce with Elasticsearch and React',
     url: 'https://hoprice.com/',
-    author: 'Ola Ajibode',
+    author: 'Tony Stark',
     num_comments: 23,
     points: 7,
     objectID: 3
@@ -41,7 +41,7 @@ const bookList = [
   {
     title: 'Design patterns for beginners',
     url: 'https://www.ohprice.com/',
-    author: 'Carlos Bruno',
+    author: 'Peter Parker Bruno',
     num_comments: 12,
     points: 4,
     objectID: 4
@@ -57,7 +57,7 @@ const bookList = [
   {
     title: ' Epistle to Timothy in Ruby',
     url: 'https://livenotices.com/',
-    author: 'CEO  TJ',
+    author: 'Ola Peters',
     num_comments: 10,
     points: 5,
     objectID: 6
@@ -66,9 +66,27 @@ const bookList = [
 
 function App() {
   const [books, setBooks] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(
-    localStorage.getItem('search') || 'React'
+
+  const useSemiPersistenceState = (key, initialState) => {
+    const [value, setValue] = React.useState(
+      localStorage.getItem(key) || initialState
+    );
+
+    React.useEffect(() => {
+      localStorage.setItem(key, value);
+    }, [value, key]);
+
+    return [value, setValue];
+  };
+
+  const [searchTerm, setSearchTerm] = useSemiPersistenceState(
+    'search',
+    'React'
   );
+
+  // useState(
+  //   localStorage.getItem('search') || 'React'
+  // );
 
   useEffect(() => {
     localStorage.setItem('search', searchTerm);
@@ -91,7 +109,7 @@ function App() {
     <div className='App'>
       <Header />
       <SearchBox search={searchTerm} handleChange={onHandleChange} />
-      <CardList books={filteredBooks} className='mb-4' />
+      <CardList books={filteredBooks} className='center' />
       <Footer />
     </div>
   );

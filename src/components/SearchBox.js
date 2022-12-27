@@ -6,7 +6,7 @@ const SearchBox = ({ handleChange }) => {
       <input
         type='search'
         placeholder='Search books by author or title'
-        className='pa3 ba bw1 b--solid b--gray br2'
+        className='pa3 ba bw1 b--solid b--navy br2'
         onChange={handleChange}
       />
     </div>
