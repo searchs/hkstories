@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBox = ({ handleChange }) => {
   return (
-    <div className='pa2 ma2 light-blue w-100 center'>
+    <div className='pa2 ma2 navy w-100 center'>
       <input
         type='search'
         placeholder='Search books by author or title'

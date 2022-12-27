@@ -6,7 +6,7 @@ const CardList = ({ books }) => {
     return (
       <Card
         key={idx}
-        title={books[idx].title}
+        title={book.title}
         url={books[idx].url}
         author={books[idx].author}
         num_comments={books[idx].num_comments}

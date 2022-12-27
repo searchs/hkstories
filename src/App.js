@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import CardList from './components/CardList';
 import Footer from './components/Footer';
+import Header from './components/Header';
 import SearchBox from './components/SearchBox';
 
 const bookList = [
@@ -65,10 +66,6 @@ const bookList = [
 
 function App() {
   const [books, setBooks] = useState([]);
-  // const [searchTerm, setSearchTerm] = useSemiPersistentState('React');
-  // const handleSearch = (event) => {
-  // setSearchTerm(event.target.value);
-  // };
   const [searchTerm, setSearchTerm] = useState(
     localStorage.getItem('search') || 'React'
   );
@@ -92,10 +89,12 @@ function App() {
 
   return (
     <div className='App'>
-      <h2 className='green fw4'> Hacker Nuice</h2>
+      <Header />
       <SearchBox search={searchTerm} handleChange={onHandleChange} />
-      <hr />
-      <CardList books={filteredBooks} />
+      <CardList
+        books={filteredBooks}
+        className='center pa3 flex flex-column flex-wrap-m flex-row-ns'
+      />
       <Footer />
     </div>
   );

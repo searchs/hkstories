@@ -1,31 +1,13 @@
 .App {
   text-align: center;
-  background: #f4f4f4;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -42,22 +24,6 @@
   }
 }
 
-h2 {
-  color: #CA1500;
-  text-transform: uppercase;
-}
-
-h4 {
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: darkcyan;
-}
-
-h6 {
-  color: #000EBB;
-  text-transform: uppercase;
-}
 
 a {
   text-decoration: none;
@@ -65,52 +31,10 @@ a {
 }
 
 a:visited {
-  color: darkcyan;
+  color: #61dafb;
 }
 
 
 ul {
   list-style: none;
-}
-
-/* .Book {
-  align-items: left;
-  text-align: left;
-  padding: 5px;
-  border: 1px solid grey;
-  border-radius: 5px;
-  margin: 7px;
-  max-width: 250px;
-  box-shadow: 1px 2px 1px #f6f6f6;
-  background: 'black';
-  color: 'white';
-
-} */
-
-.BookTitle {
-  letter-spacing: 2px;
-  font-size: 1.025em;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: white;
-  background-color: 'black'
-}
-/* 
-a.BookTitle {
-  letter-spacing: 2px;
-  font-size: 1.025em;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: 'yellow';
-  background-color: 'black'
-} */
-
-.bg-dark-blue { 
-  background: #000ebb;
-}
-
-.bg-footer {
-  background: #080708;
-  left:0;
-  bottom:0;
 }

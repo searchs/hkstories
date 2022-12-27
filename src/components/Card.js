@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({ url, title, author, num_comments, points }) {
   return (
-    <div className='outline w-25 pa3 mr2 br3 ma2 bg-black white'>
+    <div className='fl w-25 pa3 mr2 br3 ma2 bg-near-black  white'>
       <h3>
         <a href={url} className='link yellow fw4'>
           {title}

@@ -1,12 +1,7 @@
-import React from 'react';
-
 function Footer() {
   return (
-    <div className='outline w-100 pa3 bg-footer white'>
-      <h3> Free Footer </h3>
-      <p>
-        <span className='i'>Hacker News Clone - Footer </span>
-      </p>
+    <div className='w-100 pa3 mt-4 bg-yellow tracked navy'>
+      <p>HK News - DevMan Inc Plc &copy; 2023</p>
     </div>
   );
 }
