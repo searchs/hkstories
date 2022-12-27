@@ -15,7 +15,7 @@ const bookList = [
     objectID: 0
   },
   {
-    title: 'Redux',
+    title: 'Redux in Scala',
     url: 'https://redux.js.org/',
     author: 'Dan Abramov, Andrew Clark',
     num_comments: 2,
@@ -23,7 +23,7 @@ const bookList = [
     objectID: 1
   },
   {
-    title: 'Redux Revoked',
+    title: 'Redux Revoked Java',
     url: 'https://reduxrevoked.js.org/',
     author: 'Dan Ajibode, Fisher Smallville',
     num_comments: 2,
@@ -31,7 +31,7 @@ const bookList = [
     objectID: 2
   },
   {
-    title: 'Fashion Elastic-Compo with Jewel Edition',
+    title: 'Ecommerce search with Elasticsearch and React',
     url: 'https://hoprice.com/',
     author: 'TJ Ajibode',
     num_comments: 23,
@@ -39,23 +39,23 @@ const bookList = [
     objectID: 3
   },
   {
-    title: 'Playing Guitar with nails',
-    url: 'https://ohprice.com/',
+    title: 'Design patterns for beginners',
+    url: 'https://www.ohprice.com/',
     author: 'Carlos Bruno',
     num_comments: 12,
     points: 4,
     objectID: 4
   },
   {
-    title: 'Basoon chocolate bars making  ',
-    url: 'https://ohprice.com/',
+    title: 'Ecommerce designed functionally in Scala',
+    url: 'https://www.katchfashion.com/',
     author: 'CTO  Fisayo',
     num_comments: 10,
     points: 3,
     objectID: 5
   },
   {
-    title: 'Study Timothy Epistle',
+    title: ' Epistle to Timothy in Ruby',
     url: 'https://livenotices.com/',
     author: 'CEO  TJ',
     num_comments: 10,
