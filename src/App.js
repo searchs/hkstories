@@ -23,7 +23,7 @@ const bookList = [
     objectID: 1
   },
   {
-    title: 'Redux Revoked Java',
+    title: 'Redux Revoked Java - Functional Prog',
     url: 'https://reduxrevoked.js.org/',
     author: 'Dan Ajibode, Fisher Smallville',
     num_comments: 2,
@@ -31,9 +31,9 @@ const bookList = [
     objectID: 2
   },
   {
-    title: 'Ecommerce search with Elasticsearch and React',
+    title: 'Ecommerce with Elasticsearch and React',
     url: 'https://hoprice.com/',
-    author: 'TJ Ajibode',
+    author: 'Ola Ajibode',
     num_comments: 23,
     points: 7,
     objectID: 3
@@ -49,7 +49,7 @@ const bookList = [
   {
     title: 'Ecommerce designed functionally in Scala',
     url: 'https://www.katchfashion.com/',
-    author: 'CTO  Fisayo',
+    author: 'Fisayo Isaacs',
     num_comments: 10,
     points: 3,
     objectID: 5
@@ -91,10 +91,7 @@ function App() {
     <div className='App'>
       <Header />
       <SearchBox search={searchTerm} handleChange={onHandleChange} />
-      <CardList
-        books={filteredBooks}
-        className='center pa3 flex flex-column flex-wrap-m flex-row-ns'
-      />
+      <CardList books={filteredBooks} className='mb-4' />
       <Footer />
     </div>
   );
