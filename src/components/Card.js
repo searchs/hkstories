@@ -1,5 +1,6 @@
 import React from 'react';
 
+// function Card({ url, title, author, num_comments, points, objectID }) {
 function Card({ url, title, author, num_comments, points }) {
   return (
     // <div className='fl w-20 pa2 mr2 br3 ma2 bg-near-black  white'>

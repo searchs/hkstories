@@ -1,8 +1,8 @@
-import React from 'react';
 import Card from './Card';
 
 const CardList = ({ books }) => {
   return books.map((book, idx) => {
+    console.log(` BOOK DETAILS: ${JSON.stringify(book)}`);
     return (
       <Card
         key={idx}

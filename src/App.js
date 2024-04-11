@@ -80,7 +80,6 @@ function App() {
   };
 
   const [searchTerm, setSearchTerm] = useSemiPersistenceState('search', 'red');
-
   // useState(
   //   localStorage.getItem('search') || 'React'
   // );
@@ -101,6 +100,7 @@ function App() {
       item.author.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
+  console.log('FILTERED BOOK: ', filteredBooks);
 
   return (
     <div className='App'>
