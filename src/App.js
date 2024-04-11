@@ -61,18 +61,33 @@ const bookList = [
     num_comments: 10,
     points: 5,
     objectID: 6
+  },
+  {
+    title: ' Speaking Programming Dialets - func-OOP',
+    url: 'https://livenotices.com/',
+    author: 'Jack Peters',
+    num_comments: 10,
+    points: 7,
+    objectID: 7
   }
 ];
+const InputWithLabel = ({ id, label, value, onInputChange }) => {
+  <>
+    <label htmlFor={id}>{label}</label>
+    &nbsp;
+    <input id={id} type='text' value={value} onChange={onInputChange} />
+  </>;
+};
 
 function App() {
   const [books, setBooks] = useState([]);
 
   const useSemiPersistenceState = (key, initialState) => {
-    const [value, setValue] = React.useState(
+    const [value, setValue] = useState(
       localStorage.getItem(key) || initialState
     );
 
-    React.useEffect(() => {
+    useEffect(() => {
       localStorage.setItem(key, value);
     }, [value, key]);
 
@@ -105,6 +120,7 @@ function App() {
   return (
     <div className='App'>
       <Header />
+      <InputWithLabel label='Another Search' />
       <SearchBox search={searchTerm} handleChange={onHandleChange} />
       <CardList books={filteredBooks} className='center items-center pa-3' />
       <Footer />
