@@ -4,11 +4,11 @@
   text-align: center;
   margin: 0 auto;
   height: 100vh;
-  padding: 3;
+  width: 100%;
+  padding: 25;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-
 }
 
 .App-link {
@@ -25,16 +25,14 @@
   }
 }
 
-
 a {
   text-decoration: none;
-  color: #000EBA;
+  color: #000eba;
 }
 
 a:visited {
   color: #61dafb;
 }
-
 
 ul {
   list-style: none;

@@ -6,11 +6,11 @@ const CardList = ({ books }) => {
     return (
       <Card
         key={idx}
-        title={books[idx].title}
-        url={books[idx].url}
-        author={books[idx].author}
-        num_comments={books[idx].num_comments}
-        points={books[idx].points}
+        title={book.title}
+        url={book.url}
+        author={book.author}
+        num_comments={book.num_comments}
+        points={book.points}
       />
     );
   });

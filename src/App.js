@@ -24,15 +24,15 @@ const bookList = [
   },
   {
     title: 'Redux Revoked Java - Functional Prog',
-    url: 'https://reduxrevoked.js.org/',
-    author: 'Tofarati Daniels, Fisher Smallville',
+    url: 'https://npmjs.com/',
+    author: 'Tofarati D. Ajifada, Fisher Smallville',
     num_comments: 2,
-    points: 4,
+    points: 40,
     objectID: 2
   },
   {
     title: 'Ecommerce with Elasticsearch and React',
-    url: 'https://hoprice.com/',
+    url: 'https://www.hoprice.com/',
     author: 'Tony Stark',
     num_comments: 23,
     points: 7,
