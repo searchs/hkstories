@@ -4,6 +4,7 @@ import CardList from './components/CardList';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import SearchBox from './components/SearchBox';
+import { Col, Row } from 'react-bootstrap';
 
 const bookList = [
   {
